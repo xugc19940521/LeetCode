@@ -1,19 +1,16 @@
 package leetcode.array;
 
 /**
- * <p>标题: MoveZeroes</p>
- * <p/>
- * <p>描述: ${DESCRIPTION}</p>
- * <p/>
- * ${DETAIL}
- * <p/>
- * <p>版权: 税友软件集团股份有限公司</p>
- * <p/>
- * <p>创建时间: 2018-09-17</p>
- * <p/>
- * <p>作者：xugc</p>
+ * @CLassName MoveZeroes
+ * @Description 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序
+ *              必须在原数组上操作，不能拷贝额外的数组。
+ *              尽量减少操作次数。
+ *              输入: [0,1,0,3,12]
+ *              输出: [1,3,12,0,0]
+ * @Author xugc
+ * @Date 2018/9/17 23:12
+ * @Version 1.0
  */
-
 public class MoveZeroes {
 
     public static void moveZeroes(int[] nums){
