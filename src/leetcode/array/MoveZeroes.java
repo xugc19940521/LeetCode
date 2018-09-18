@@ -14,9 +14,12 @@ package leetcode.array;
 public class MoveZeroes {
 
     public static void moveZeroes(int[] nums){
+        //如果数组长度为0或1，直接返回该数组
         if(nums.length<2)return;
+        //从倒数第一个元素开始遍历
         for(int i=nums.length-2;i>=0;i--){
             if(nums[i]==0){
+                //如果该元素==0，则后面所有元素都向前挪一位
                 for(int j=i+1;j<nums.length;j++){
                     int temp = nums[j-1];
                     nums[j-1] = nums[j] ;
