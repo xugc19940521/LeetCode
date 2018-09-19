@@ -13,14 +13,17 @@ package leetcode.array;
 
 public class RemoveKTimes {
 
-    public static int  RemoveKTimes(int[] nums, int k){
+    public static int  removeKTimes(int[] nums){
         int len = nums.length, j = 2;
         if(len<=2)return len;
-        for(int i=2;i<len;i++){
-            if(nums[i] != nums[i-1] || nums[i] != nums[i-2]){
+        int temp = nums[0];
+        for(int i=2;i<len;i++){//从第三个元素开始循环
+            if((nums[i] != nums[i-1] || nums[i] != temp)){ //判断第i个元素 是否等于第i-1个元素和第i-2个元素
+                temp = nums[i-1]; //缓存第i-2个元素
+                nums[j] = nums[i];
                 j++;
             }
         }
-        return 0;
+        return j;
     }
 }
