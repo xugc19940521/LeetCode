@@ -1,5 +1,7 @@
 package leetcode.question9;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.TreeMap;
 
 /**
@@ -14,8 +16,30 @@ import java.util.TreeMap;
 public class ThirdMax {
 
     public static int thirdMax(int[] nums) {
-
-
-        return 0;
+        int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE, third = Integer.MIN_VALUE ;
+        Set s = new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            s.add(nums[i]);
+            int temp = nums[i];
+            if (temp > first){
+                third = second;
+                second = first;
+                first = temp;
+            }else if(temp == first){
+                continue;
+            }else{
+                if(temp>second){
+                    third = second;
+                    second = temp;
+                }else if(temp == second){
+                    continue;
+                }else{
+                    if(temp>third){
+                        third = temp;
+                    }
+                }
+            }
+        }
+        return s.size()>=3?third:first;
     }
 }
