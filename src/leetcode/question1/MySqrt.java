@@ -1,4 +1,4 @@
-package leetcode.question2;
+package leetcode.question1;
 
 /**
  * @CLassName MySqrt(69)
